@@ -22,6 +22,7 @@ import pickle
 #####
 
 communities_file = "Output/hier_infomap_out_final/production_output_final.tree"
+failures_file = "Output/hier_infomap_out_final/failures.log"
 index_dir = "WhooshIndex"
 pickle_file = "Output/hier_infomap_out_final/communities.pickle"
 
@@ -105,22 +106,32 @@ with open(communities_file, 'r') as f:
     reader = csv.reader(f, delimiter=' ')
     with ix.writer() as w:
         for line in reader:
-            node, flow, url, _ = tuple(line)
-            # Look up the URL and extract the stored data
-            with ix.searcher() as s:
-                d = s.stored_fields(s.document_number(url=url))
-            if d is None:
-                raise Exception
-            # Discard the leaf node number and store only the rest of the
-            # community hierarchy (so the "community" field actually represents
-            # the lowest-level community).
-            clabel = node.rpartition(':')[0]
-            d["infomap_hier_community"] = str(clabel)
-            d["infomap_hier_flow"] = float(flow)
-            communities[clabel][url] = {'time': d['time']}
-#            d["infomap_hier_community_size"] = size
-            w.update_document(**d)
-            pc.click()
+            try:
+#                print(line)
+                node, flow, url, _ = tuple(line)
+                # Look up the URL and extract the stored data
+                with ix.searcher() as s:
+                    d = s.stored_fields(s.document_number(url=url))
+                if d is None:
+                    raise Exception
+                # Discard the leaf node number and store only the rest of the
+                # community hierarchy (so the "community" field actually represents
+                # the lowest-level community).
+                clabel = node.rpartition(':')[0]
+                d["infomap_hier_community"] = str(clabel)
+                d["infomap_hier_flow"] = float(flow)
+                communities[clabel][url] = {'time': d['time']}
+    #            d["infomap_hier_community_size"] = size
+                w.update_document(**d)
+
+            except Exception as e:
+                print("Line Failure, skipping.")
+                with open(failures_file, 'a', encoding='utf-8') as ff:
+                    ff.write(', '.join(line))
+                    ff.write('\n')
+                continue
+            finally:
+                pc.click()
         print("Committing index...")
     print("...done.")
 

@@ -50,6 +50,7 @@ mappings_file = "HandCoded/story_pairs_validation_august.csv"
 index_dir = "WhooshIndex"
 # file_list = ["ArticleTexts/bbc-out.csv", "ArticleTexts/express-out.csv","ArticleTexts/guardian-out.csv", "ArticleTexts/mail-out.csv","ArticleTexts/mirror-out.csv"]
 file_list = ["ArticleTexts/guardian_clean-out.csv"]
+# file_list = ["ArticleTexts/bbc-out.csv"]
 
 
 # Words to be ignored. Note that this is case-sensitive unless opt["to_lower"]
@@ -829,8 +830,8 @@ def process_raw_content(fn, writer):
 #                        header.rstrip()[-20:],"%Y-%m-%dT%H:%M:%SZ"))
 
 
-            # time = (datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%SZ"))
-            time = (datetime.datetime.strptime(date, "%Y-%m-%d"))
+            time = (datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%SZ"))
+            # time = (datetime.datetime.strptime(date, "%Y-%m-%d"))
 #            paperurl = re.sub(re.compile(r'(http://[^/]+/).*'), '\g<1>', url)
 
             # And finally the article body (not converted to nltk.Text here
