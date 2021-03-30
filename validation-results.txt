@@ -1,0 +1,144 @@
+Importing index...
+Done. 39558 articles retrieved.
+Corpora FreqDists unpickled and loaded.
+Keywords unpickled and loaded.
+Manual mappings: 32130 in 252 slices.
+***** VALIDATION TEST RESULTS at Sun Mar 11 23:47:50 2018
+
+ input_encoding: utf-8
+pre_process_fns: True
+reject_stopwords: False
+reject_badwords: True
+pad_fullstops: True
+to_lower: False
+ignore_shouting: True
+tokeniser: RegexTokenizer(expression=re.compile('\\w+(\\.?\\w+)*'), gaps=False)
+days_window: 3
+prop_validate: 1
+min_length: 200
+final_match_threshold: 1
+cc_threshold: 0.5
+query_expansion_model: <class 'whoosh.classify.Bo1Model'>
+bm25f_b: 0.75
+bm25f_k1: 1
+do_normalise: True
+nummatches: 5000000
+numterms: 5
+title_boost: 1.0
+bm25f_score_cutoff: 1.25
+cs_score_cutoff: 1
+prop_accept: 0.15
+n_keywords: 500
+min_keywords: 10
+rel_freq_cutoff: 100
+log_lik_cutoff: 0
+prop_ner: 0.2
+min_ner: 10
+classifierdir_ners: /home/tom/Documents/dev/stanford-ner-2016-10-31/classifiers/
+classpath_ners: /home/tom/Documents/dev/stanford-ner-2016-10-31/
+multiprocessing: True
+fsuffix: _final
+rebuild_index: False
+rebuild_FreqDists: False
+rebuild_keywords: False
+do_test: True
+dev_test: False
+
+
+Starting classifier KWClassifier
+FalseNegative: http://www.dailymail.co.uk/femail/article-2316848/Queen-Beatrix-abdication-Sparkling-Duchess-Camilla-gem-hairdo.html http://www.mirror.co.uk/news/world-news/hail-king-willem-alexander-netherlands-welcomes-1861624 (0.7246376811594203, True)
+FalseNegative: http://www.guardian.co.uk/sport/2013/apr/30/lancaster-lions-england-maitland http://www.dailymail.co.uk/sport/rugbyunion/article-2317087/Jonny-Wilkinson-said-Lions.html (0.7619047619047619, True)
+FalseNegative: http://www.guardian.co.uk/sport/2013/apr/30/lancaster-lions-england-maitland http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html (0.45454545454545453, True)
+FalseNegative: http://www.guardian.co.uk/sport/2013/apr/30/lancaster-lions-england-maitland http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 (0.7692307692307693, True)
+FalseNegative: http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 http://www.dailymail.co.uk/sport/rugbyunion/article-2317087/Jonny-Wilkinson-said-Lions.html (0.5128205128205129, True)
+FalseNegative: http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html (0.25641025641025644, True)
+FalseNegative: http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html http://www.dailymail.co.uk/sport/rugbyunion/article-2317087/Jonny-Wilkinson-said-Lions.html (0.5714285714285715, True)
+FalseNegative: http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html http://www.guardian.co.uk/sport/2013/apr/30/jonny-wilkinson-turns-down-lions (0.7092198581560284, True)
+FalsePositive: http://www.guardian.co.uk/uk/2013/apr/30/richard-iii-archaeologists-leicester-knight http://www.dailymail.co.uk/sciencetech/article-2317097/Researchers-family-knight-Middle-Ages-buried-Edinburgh-car-park.html (1.0, False)
+FalseNegative: http://www.guardian.co.uk/politics/shortcuts/2013/apr/30/ed-miliband-pallet-soapbox-politics http://www.guardian.co.uk/politics/wintour-and-watt/2013/apr/30/edmiliband-gordon-brown (0.1626016260162602, True)
+FalsePositive: http://www.dailymail.co.uk/tvshowbiz/article-2316925/Dancing-With-The-Stars-2013-Kellie-Pickler-nails-sexy-samba-topless-Derek-Hough.html http://www.dailymail.co.uk/tvshowbiz/article-2317178/Derek-Hough-shows-toned-dancers-torso-goes-shirtless-hairdressers.html (1.7333333333333334, False)
+FalsePositive: http://www.guardian.co.uk/media/2013/apr/30/the-apprentice-lord-sugar-stella-english http://www.dailymail.co.uk/tvshowbiz/article-2317051/The-Apprentice-2013-lineup-Contestants-include-jazz-singer-nude-model.html (1.0256410256410258, False)
+FalsePositive: http://www.guardian.co.uk/lifeandstyle/shortcuts/2013/apr/30/diana-rigg-laying-into-women http://www.dailymail.co.uk/tvshowbiz/article-2316862/Diana-Rigg-Avengers-star-says-shes-feminist-loves-men-offer-seat.html (1.2903225806451613, False)
+FalsePositive: http://www.dailymail.co.uk/news/article-2317079/Airlines-launch-online-upgrade-auctions-spare-seats-business-class.html http://www.dailymail.co.uk/sciencetech/article-2317057/Artist-creates-fascinating-prints-finger-smudges-swipes-using-iPad-apps-Facebook-Angry-Birds.html (1.645021645021645, False)
+FalseNegative: http://www.mirror.co.uk/news/uk-news/prestatyn-arson-trial-melanie-smith-1861857 http://www.bbc.co.uk/news/uk-wales-north-east-wales-21789828 (0.975609756097561, True)
+
+Classification method: KWClassifier
+<FreqDist with 4 samples and 20705 outcomes>
+ TrueNegative  TruePositive FalseNegative FalsePositive 
+        20641            49            10             5 
+Accuracy: 0.999276
+Precision: 0.907407 
+Recall: 0.830508
+F1: 0.867257
+Matthews correlation coefficient: 0.867749
+Krippendorff's alpha: 0.866897
+
+
+Starting classifier WhooshBM25FClassifier
+FalseNegative: http://www.dailymail.co.uk/femail/article-2316848/Queen-Beatrix-abdication-Sparkling-Duchess-Camilla-gem-hairdo.html http://www.mirror.co.uk/news/world-news/hail-king-willem-alexander-netherlands-welcomes-1861624 (0.5804221068397446, True)
+FalseNegative: http://www.guardian.co.uk/sport/2013/apr/30/lancaster-lions-england-maitland http://www.dailymail.co.uk/sport/rugbyunion/article-2317087/Jonny-Wilkinson-said-Lions.html (0.6061656441500567, True)
+FalseNegative: http://www.guardian.co.uk/sport/2013/apr/30/lancaster-lions-england-maitland http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html (0.16907770720929305, True)
+FalseNegative: http://www.guardian.co.uk/sport/2013/apr/30/lancaster-lions-england-maitland http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 (0.7624440344222088, True)
+FalseNegative: http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 http://www.dailymail.co.uk/sport/rugbyunion/article-2317087/Jonny-Wilkinson-said-Lions.html (0.7185707239245356, True)
+FalseNegative: http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 http://www.guardian.co.uk/sport/2013/apr/30/jonny-wilkinson-turns-down-lions (0.9450088221400892, True)
+FalseNegative: http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html (0.5079890593981196, True)
+FalseNegative: http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html http://www.dailymail.co.uk/sport/rugbyunion/article-2317087/Jonny-Wilkinson-said-Lions.html (0.13230747204698315, True)
+FalseNegative: http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html http://www.guardian.co.uk/sport/2013/apr/30/jonny-wilkinson-turns-down-lions (0.7008209464973212, True)
+FalsePositive: http://www.bbc.co.uk/news/world-europe-22353145 http://www.dailymail.co.uk/femail/article-2316996/Camilla-dazzling-Duchess-Amsterdam-celebrate-crowning-King-Willem-Alexander-Holland.html (1.2661374196987762, False)
+FalsePositive: http://www.dailymail.co.uk/news/article-2317186/Maria-Shriver-returning-NBC-decade-away.html http://www.dailymail.co.uk/tvshowbiz/article-2317036/Maria-Shriver-wears-Sunday-best-heads-service-daughter-Katherine-Schwarzenegger.html (1.0433417323109777, False)
+FalsePositive: http://www.dailymail.co.uk/news/article-2317186/Maria-Shriver-returning-NBC-decade-away.html http://www.dailymail.co.uk/femail/article-2317103/We-meant-hungry-says-Lionel-Shriver-admits-prefers-light-tight-body-eats-popcorn-dinner-does-3-000-star-jumps-day.html (1.2480375491856792, False)
+FalsePositive: http://www.guardian.co.uk/business/blog/2013/apr/30/eurobonds-euro-germany-george-soros http://www.bbc.co.uk/news/business-22353726 (1.0118717579690548, False)
+FalsePositive: http://www.dailymail.co.uk/news/article-2317161/65-going-strong-Car-company-Land-Rover-celebrates-milestone-birthday-oldest-worker-rides-model.html http://www.dailymail.co.uk/news/article-2317061/April-Jones-trial-Blood-victim-suspect-Mark-Bridgers-living-room-hallway-bathroom.html (1.2506371475214528, False)
+FalsePositive: http://www.dailymail.co.uk/tvshowbiz/article-2316925/Dancing-With-The-Stars-2013-Kellie-Pickler-nails-sexy-samba-topless-Derek-Hough.html http://www.dailymail.co.uk/tvshowbiz/article-2317178/Derek-Hough-shows-toned-dancers-torso-goes-shirtless-hairdressers.html (1.631085554074523, False)
+FalsePositive: http://www.guardian.co.uk/politics/shortcuts/2013/apr/30/ed-miliband-pallet-soapbox-politics http://www.guardian.co.uk/commentisfree/2013/apr/30/ed-miliband-borrowing-case (1.2497583473038425, False)
+FalseNegative: http://www.guardian.co.uk/politics/shortcuts/2013/apr/30/ed-miliband-pallet-soapbox-politics http://www.guardian.co.uk/politics/wintour-and-watt/2013/apr/30/edmiliband-gordon-brown (0.4717500877324281, True)
+FalsePositive: http://www.guardian.co.uk/commentisfree/2013/apr/30/ed-miliband-political-interview http://www.guardian.co.uk/commentisfree/2013/apr/30/ed-miliband-borrowing-case (1.174981515467852, False)
+FalsePositive: http://www.dailymail.co.uk/news/article-2317079/Airlines-launch-online-upgrade-auctions-spare-seats-business-class.html http://www.dailymail.co.uk/sciencetech/article-2317057/Artist-creates-fascinating-prints-finger-smudges-swipes-using-iPad-apps-Facebook-Angry-Birds.html (1.4390181587992914, False)
+FalsePositive: http://www.guardian.co.uk/business/2013/apr/30/european-central-bank-eurozone-warning http://www.bbc.co.uk/news/business-22353726 (1.0740091050197866, False)
+FalsePositive: http://www.guardian.co.uk/lifeandstyle/shortcuts/2013/apr/30/diana-rigg-laying-into-women http://www.dailymail.co.uk/tvshowbiz/article-2316862/Diana-Rigg-Avengers-star-says-shes-feminist-loves-men-offer-seat.html (1.8067057443555414, False)
+FalsePositive: http://www.express.co.uk/news/health/395917/Botox-gave-me-my-life-back-Burn-victim-makes-miraculous-recovery-with-beauty-treatment http://www.dailymail.co.uk/femail/article-2317018/Move-Botox-Toxin-free-wrinkle-busting-treatment-using-power-COLD-launches-UK.html (1.2574847849745265, False)
+
+Classification method: WhooshBM25FClassifier
+<FreqDist with 4 samples and 20705 outcomes>
+ TrueNegative  TruePositive FalsePositive FalseNegative 
+        20634            49            12            10 
+Accuracy: 0.998937
+Precision: 0.803279 
+Recall: 0.830508
+F1: 0.816667
+Matthews correlation coefficient: 0.816248
+Krippendorff's alpha: 0.816138
+
+
+Starting classifier CompositeConditionalClassifier
+FalseNegative: http://www.dailymail.co.uk/femail/article-2316848/Queen-Beatrix-abdication-Sparkling-Duchess-Camilla-gem-hairdo.html http://www.mirror.co.uk/news/world-news/hail-king-willem-alexander-netherlands-welcomes-1861624 (0.6525298939995825, True)
+FalseNegative: http://www.guardian.co.uk/politics/shortcuts/2013/apr/30/ed-miliband-pallet-soapbox-politics http://www.guardian.co.uk/politics/wintour-and-watt/2013/apr/30/edmiliband-gordon-brown (0.1626016260162602, True)
+FalsePositive: http://www.guardian.co.uk/commentisfree/2013/apr/30/ed-miliband-political-interview http://www.guardian.co.uk/commentisfree/2013/apr/30/ed-miliband-borrowing-case (1.026087248961996, False)
+FalsePositive: http://www.guardian.co.uk/lifeandstyle/shortcuts/2013/apr/30/diana-rigg-laying-into-women http://www.dailymail.co.uk/tvshowbiz/article-2316862/Diana-Rigg-Avengers-star-says-shes-feminist-loves-men-offer-seat.html (1.5485141625003513, False)
+FalseNegative: http://www.guardian.co.uk/sport/2013/apr/30/lancaster-lions-england-maitland http://www.dailymail.co.uk/sport/rugbyunion/article-2317087/Jonny-Wilkinson-said-Lions.html (0.6840352030274093, True)
+FalseNegative: http://www.guardian.co.uk/sport/2013/apr/30/lancaster-lions-england-maitland http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html (0.45454545454545453, True)
+FalseNegative: http://www.guardian.co.uk/sport/2013/apr/30/lancaster-lions-england-maitland http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 (0.7658374018264891, True)
+FalseNegative: http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 http://www.dailymail.co.uk/sport/rugbyunion/article-2317087/Jonny-Wilkinson-said-Lions.html (0.6156956183725242, True)
+FalseNegative: http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 http://www.guardian.co.uk/sport/2013/apr/30/jonny-wilkinson-turns-down-lions (0.9853249238905575, True)
+FalseNegative: http://www.mirror.co.uk/sport/rugby-union/british-irish-lions-england-star-1861963 http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html (0.25641025641025644, True)
+FalseNegative: http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html http://www.dailymail.co.uk/sport/rugbyunion/article-2317087/Jonny-Wilkinson-said-Lions.html (0.3518680217377773, True)
+FalseNegative: http://www.dailymail.co.uk/sport/rugbyunion/article-2317094/From-X-Factor-Lions-tour-Matt-Stevens-completes-remarkable-comeback.html http://www.guardian.co.uk/sport/2013/apr/30/jonny-wilkinson-turns-down-lions (0.7050204023266748, True)
+FalsePositive: http://www.dailymail.co.uk/tvshowbiz/article-2316925/Dancing-With-The-Stars-2013-Kellie-Pickler-nails-sexy-samba-topless-Derek-Hough.html http://www.dailymail.co.uk/tvshowbiz/article-2317178/Derek-Hough-shows-toned-dancers-torso-goes-shirtless-hairdressers.html (1.682209443703928, False)
+FalsePositive: http://www.dailymail.co.uk/news/article-2317079/Airlines-launch-online-upgrade-auctions-spare-seats-business-class.html http://www.dailymail.co.uk/sciencetech/article-2317057/Artist-creates-fascinating-prints-finger-smudges-swipes-using-iPad-apps-Facebook-Angry-Birds.html (1.5420199019104683, False)
+
+Classification method: CompositeConditionalClassifier
+<FreqDist with 4 samples and 20705 outcomes>
+ TrueNegative  TruePositive FalseNegative FalsePositive 
+        20642            49            10             4 
+Accuracy: 0.999324
+Precision: 0.924528 
+Recall: 0.830508
+F1: 0.875000
+Matthews correlation coefficient: 0.875927
+Krippendorff's alpha: 0.874664
+
+KWClassifier 0.024307824341865722
+WhooshBM25FClassifier 0.019848445372302615
+CompositeConditionalClassifier 0.023671718477174187
+Test complete
+
