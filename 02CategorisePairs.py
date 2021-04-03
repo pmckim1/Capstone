@@ -49,7 +49,7 @@ import numpy as np
 mappings_file = "HandCoded/story_pairs_validation_august.csv"
 index_dir = "WhooshIndex"
 # file_list = ["ArticleTexts/bbc-out.csv", "ArticleTexts/express-out.csv","ArticleTexts/guardian-out.csv", "ArticleTexts/mail-out.csv","ArticleTexts/mirror-out.csv"]
-file_list = ["ArticleTexts/guar_small-out.csv"]
+file_list = ["ArticleTexts/Guar_Small_pol-out.csv"]
 # file_list = ["ArticleTexts/bbc-out.csv"]
 
 

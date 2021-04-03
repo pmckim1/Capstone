@@ -26,7 +26,7 @@ def create_dto(cell_contents):
             return None
             
 # with open("ArticleTexts/guardian_clean.csv", 'r') as inf, open("ArticleTexts/guardian_clean-out.csv", 'w') as outf:
-with open("./ArticleTexts/Guar_Small.CSV", 'r') as inf, open("./ArticleTexts/Guar_Small-out.csv", 'w') as outf:
+with open("./ArticleTexts/Guar_Small_pol.CSV", 'r') as inf, open("./ArticleTexts/Guar_Small_pol-out.csv", 'w') as outf:
         reader = csv.DictReader(inf, delimiter=',')
         writer = csv.writer(outf, delimiter=',')
         for line in reader:
