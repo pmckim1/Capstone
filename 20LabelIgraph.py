@@ -92,7 +92,7 @@ with ix.searcher() as s:
         # Generate list of community dicts, whose cluster matches (or is a
         # sub-cluster of) the node given
 #        pprint(node)
-        salient_communities = [v for k, v in c.items() if k.startswith(node['hier_infomap_comm'])]
+        salient_communities = [v for k, v in c.items() if k is not None and k.startswith(node['hier_infomap_comm'])]
 
         salient_articles = {}
         for d in salient_communities:
