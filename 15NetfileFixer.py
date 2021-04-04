@@ -38,8 +38,8 @@ def test_line(line):
 
 
 if __name__ == "__main__":
-    os.rename("Output/production_output_final.net", "production_output_final.net.unamended")
-    with open("Output/production_output_final_unamended.net", 'r', encoding="utf-8") as inf, \
+    os.rename("Output/production_output_final.net", "Output/production_output_final.unamended.net")
+    with open("Output/production_output_final.unamended.net", 'r', encoding="utf-8") as inf, \
             open("Output/production_output_final.net", 'w', encoding="utf-8") as outf:
         in_vertices = True
         for line in inf:

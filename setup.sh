@@ -12,9 +12,9 @@ sudo yum group install -y "Development Tools"
 
 # python-igraph requires cmake3.16 or highter.
 # Get the binary distribution.
-wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0-linux-x86_64.tar.gz ~/
+wget -nc -P ~/ https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0-linux-x86_64.tar.gz
 # UNpack it.
-tar -zxvf ~/cmake-3.20.0-linux-x86_64.tar.gz
+tar -zxvf ~/cmake-3.20.0-linux-x86_64.tar.gz -C ~/
 # Move the cmake tool into place
 sudo cp ~/cmake-3.20.0-linux-x86_64/bin/cmake /usr/bin/cmake-3.20
 # Symlink the cmake executable to use it.
