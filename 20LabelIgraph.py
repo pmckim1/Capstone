@@ -91,8 +91,13 @@ with ix.searcher() as s:
     for node in tqdm(i.vs):
         # Generate list of community dicts, whose cluster matches (or is a
         # sub-cluster of) the node given
-#        pprint(node)
-        salient_communities = [v for k, v in c.items() if k is not None and k.startswith(node['hier_infomap_comm'])]
+        # pprint(node)
+        hier_infomap_comm_value = node['hier_infomap_comm']
+        salient_communities = [v for k, v in c.items() if
+                               k is not None and
+                               hier_infomap_comm_value is not None
+                               and k.startswith(hier_infomap_comm_value)
+                               ]
 
         salient_articles = {}
         for d in salient_communities:
@@ -126,4 +131,5 @@ print("Dumping igraph files...")
 i.write_pickle(igraph_out)
 i.write_graphml(igraphml_out)
 print("...done.")
+
 
