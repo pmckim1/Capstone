@@ -148,7 +148,7 @@ opt["bm25f_k1"] = 1
 # Normalise inputs?
 opt["do_normalise"] = True
 # Number of matches to fetch
-opt["nummatches"] = 5000000
+opt["nummatches"] = 5000000 # might need to adjust 
 # Number of terms to calculate
 opt["numterms"] = 5
 # Boost to score to give to words in the title
