@@ -120,7 +120,7 @@ opt["tokeniser"] = whoosh.analysis.RegexTokenizer()
 
 ## Tweakable parameters - both classifiers
 # Number of days either side of publication to check.
-opt["days_window"] = 7 # 3days is original 
+opt["days_window"] = 3 # 3days is original also tried 7
 # Manual mappings for validation. Remainder for testing.
 opt["prop_validate"] = 1
 # Minimum length of article (in words) for it to be considered for matching.
@@ -164,7 +164,7 @@ opt["cs_score_cutoff"] = 1
 # Min proportion of item matches for +ve classification.
 opt["prop_accept"] = 0.15
 # Number of keywords to use for category classifier
-opt["n_keywords"] = 200 #500 #500 is original 
+opt["n_keywords"] = 500 
 # Min number of keywords to attempt a category classifier match.
 opt["min_keywords"] = 10
 # Min relative frequency for a word to be a keyword.
