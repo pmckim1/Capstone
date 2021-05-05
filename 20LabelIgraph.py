@@ -89,6 +89,7 @@ with ix.searcher() as s:
     # Iterate through the igraph vertices (articles) and label with their own title
     # and the title of the median article in their cluster
     for node in tqdm(i.vs):
+    # for node in i.vs:
         # Generate list of community dicts, whose cluster matches (or is a
         # sub-cluster of) the node given
         # pprint(node)
@@ -106,7 +107,20 @@ with ix.searcher() as s:
 #        pprint(salient_articles)
 
         # Sort by time and take the median item, keeping only the url (tuple part 0)
-        median_url = sorted(iter(salient_articles.items()), key=lambda x: x[1]['time'])[(len(salient_communities)-1) // 2][0]
+        if len(salient_communities) <= 0:
+            continue
+        try:
+            median_url = sorted(
+                iter(
+                    salient_articles.items()
+                ),
+                key=lambda x: x[1]['time']
+            )[(len(salient_communities)-1) // 2][0]
+        except Exception as e:
+            print("It broke again:")
+            print("salient_articles", len(salient_articles), salient_articles)
+            print("salient_communities", len(salient_communities), salient_communities)
+            raise
 #        pprint(median_url)
 
         # Look up the URL and extract the stored data

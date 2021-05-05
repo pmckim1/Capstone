@@ -1,3 +1,4 @@
+#%%
 #!/usr/bin/env python3
 """Assemble a Networkx graph for the news project.
 by Tom Nicholls, 2013-2018.
@@ -141,3 +142,6 @@ g.write_pickle(hier_igraph_kw_file)
 g.write_graphml(hier_igraph_kw_file_graphml)
 print("...done.")
 
+
+
+# %%

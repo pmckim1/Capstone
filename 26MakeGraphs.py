@@ -1,3 +1,4 @@
+#%%
 #!/usr/bin/env python3
 """Make graphs for the news story project.
 by Tom Nicholls, 2013-2015.
@@ -69,3 +70,6 @@ plt.show()
 #    plt.plot(offsets[k], range(1, len(offsets[k])))
 #plt.show()
 #    print k
+
+
+# %%
