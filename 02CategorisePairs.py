@@ -49,7 +49,7 @@ import numpy as np
 mappings_file = "HandCoded/story_pairs_validation_august.csv"
 index_dir = "WhooshIndex"
 # file_list = ["ArticleTexts/bbc-out.csv", "ArticleTexts/express-out.csv","ArticleTexts/guardian-out.csv", "ArticleTexts/mail-out.csv","ArticleTexts/mirror-out.csv"]
-file_list = ["ArticleTexts/Guar_Small_pol-out.csv"]
+file_list = ["ArticleTexts/medium-boi-out.csv"]
 # file_list = ["ArticleTexts/bbc-out.csv"]
 
 
@@ -120,7 +120,7 @@ opt["tokeniser"] = whoosh.analysis.RegexTokenizer()
 
 ## Tweakable parameters - both classifiers
 # Number of days either side of publication to check.
-opt["days_window"] = 7
+opt["days_window"] = 3 # 3days is original also tried 7
 # Manual mappings for validation. Remainder for testing.
 opt["prop_validate"] = 1
 # Minimum length of article (in words) for it to be considered for matching.
@@ -148,7 +148,7 @@ opt["bm25f_k1"] = 1
 # Normalise inputs?
 opt["do_normalise"] = True
 # Number of matches to fetch
-opt["nummatches"] = 5000000
+opt["nummatches"] = 5000000 # might need to adjust 
 # Number of terms to calculate
 opt["numterms"] = 5
 # Boost to score to give to words in the title
@@ -164,7 +164,7 @@ opt["cs_score_cutoff"] = 1
 # Min proportion of item matches for +ve classification.
 opt["prop_accept"] = 0.15
 # Number of keywords to use for category classifier
-opt["n_keywords"] = 200
+opt["n_keywords"] = 500 
 # Min number of keywords to attempt a category classifier match.
 opt["min_keywords"] = 10
 # Min relative frequency for a word to be a keyword.
@@ -176,7 +176,7 @@ opt["log_lik_cutoff"] = 0
 # Min proportion of item matches for +ve classification.
 opt["prop_ner"] = 0.20
 # Min number of named entities to attempt a category classifier match.
-opt["min_ner"] = 5
+opt["min_ner"] = 5 # original used 10
 
 ## Tweakable parameters - NERStanford classifier
 opt["classifierdir_ners"] = '/home/tom/Documents/dev/stanford-ner-2016-10-31/classifiers/'

@@ -26,7 +26,7 @@ def create_dto(cell_contents):
             return None
             
 # with open("ArticleTexts/guardian_clean.csv", 'r') as inf, open("ArticleTexts/guardian_clean-out.csv", 'w') as outf:
-with open("./ArticleTexts/Guar_Small_pol.CSV", 'r') as inf, open("./ArticleTexts/Guar_Small_pol-out.csv", 'w') as outf:
+with open("./ArticleTexts/medium-boi.csv", 'r') as inf, open("./ArticleTexts/medium-boi-out.csv", 'w') as outf:
         reader = csv.DictReader(inf, delimiter=',')
         writer = csv.writer(outf, delimiter=',')
         for line in reader:
@@ -45,13 +45,19 @@ with open("./ArticleTexts/Guar_Small_pol.CSV", 'r') as inf, open("./ArticleTexts
                                 print("Skipping line {} (bad date) {}".format(line["t"], line["pub_date"]))
                                 print(e)
                                 continue
-                        line["headline"] = line["headline"].replace('\n', ' ')
+                        # Remove the errant newlines in the headline.
+                        headline = line["headline"].replace('\n', ' ')
+                        # Remove the errant double quotes that sometimes appear and break the bad encodings that happen later.
+                        headline = headline.replace('\"', '')
+                        # Remove the non-ascii characters that break encodings later.
+                        headline = headline.encode("utf-8").decode("ascii", "ignore")
+                        text = line["text"].encode("utf-8").decode("ascii", "ignore")
                         writer.writerow([
-                                line["t"] + " - " + line["headline"],
+                                line["webUrl"],
                                 line["sectionid"],
-                                line["headline"],
+                                headline,
                                 time,
-                                line["text"],
+                                text,
                         ])
                 except csv.Error as e:
                         print(e)
